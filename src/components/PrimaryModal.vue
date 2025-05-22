@@ -15,8 +15,8 @@ const visible = ref(true)
 </script>
 
 <template>
-    <teleport defer to="#modal-root">
-        <transition name="fade-zoom">
+    <Teleport defer to="#modal-root">
+        <Transition name="fade-zoom">
             <div v-if="visible" class="modal-wrapper">
                 <div class="modal">
                     <h2>{{ title }}</h2>
@@ -26,8 +26,8 @@ const visible = ref(true)
                     <SecondaryModal v-if="showNested" @close="showNested = false" content="contest passed by prop!" />
                 </div>
             </div>
-        </transition>
-    </teleport>
+        </Transition>
+    </Teleport>
 </template>
 
 
